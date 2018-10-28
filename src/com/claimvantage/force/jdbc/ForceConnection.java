@@ -39,8 +39,9 @@ public class ForceConnection implements Connection {
         return new ForcePreparedStatement();
     }
     
+    // Added in Java 7
     public int getNetworkTimeout() {
-        // Milliseconds; method added in Java 7
+        // Milliseconds
         return 30 * 1000;
     }
     
