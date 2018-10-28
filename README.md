@@ -14,6 +14,16 @@ Use Ant to generate the Jar file: the script merges all the classes into one Jar
 
 ## Using
 
-[SchemaSpy](http://schemaspy.sourceforge.net/) is a Java program and so can be run in a variety of ways. Details are given below for using it from Ant. SchemaSpy itself delegates to the (non-Java) dot executable from [Graphviz](http://www.graphviz.org/) so that needs to be installed on the machine you are running SchemaSpy on and added to the path. (Check that this is working by running "dot -V" from the command-line which should just output some version information.)
+Here is how to generate the SchemaSpy output for your Salesforcr org:
 
-Salesforce objects are treated as tables and Salesforce fields as columns. Note that formula fields return a size of 1300, the maximum size of the formula string. Picklist values, record type names and the "to many" relationship name are displayed in the SchemaSpy comments column.
+* Download the [SchemaSpy jar](http://schemaspy.sourceforge.net/)
+* Download and install [Graphviz](http://www.graphviz.org/) that is used by SchemaSpy to create the automatically laid out diagrams; multiple platforms including Windows and Mac are supported
+* Build Download the Force Metadata JDBC driver jar (see previous section)
+* In the folder that contains the jars just enter this (replacing the arguments that start with "My" with your own values and entering it all on one line):
+```
+java -cp schemaSpy_5.0.0.jar;force-metadata-jdbc-driver-2.0.jar net.sourceforge.schemaspy.Main -t force -u MyUserName -p MyPasswordAndSecurityToken -font Arial -fontsize 8 -hq -norows -o doc -db MyDbName -desc "Extracted from MyDbName on Force.com"
+```
+
+The arguments are documented in the SchemaSpy web site. The only change needed for Mac/Unix is the -cp argument separator changing from ";" to ":".
+
+By default all custom objects are output. The set of objects that are output can be customized by adding a -connprops argument. Here is an example that outputs five standard objects in addition to all the custom objects: -connprops excludes\=;includes\=Account,Contact,User,Task,Event On Mac/Unix bash this would need to be: -connprops excludes\\=\;includes\\=Account,Contact,User,Task,Event More details of how the -connprops can be used including how to change the URL to for example connect to a sandbox org are in the original usage page. (Note that the property to achieve this is url which is in lower case.)
