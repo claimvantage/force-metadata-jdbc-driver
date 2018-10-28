@@ -39,6 +39,6 @@ More details of how the -connprops can be used including how to change the URL t
 
 See:
 
-* [original usage page](https://code.google.com/archive/p/force-metadata-jdbc-driver/wikis/Useage.wiki)
+* [first usage page](https://code.google.com/archive/p/force-metadata-jdbc-driver/wikis/Useage.wiki)
 * [later usage page](https://code.google.com/archive/p/force-metadata-jdbc-driver/wikis/UsageForV2.wiki)
 * [issues](https://code.google.com/archive/p/force-metadata-jdbc-driver/issues)
