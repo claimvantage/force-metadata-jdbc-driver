@@ -24,11 +24,13 @@ Here is how to generate the SchemaSpy output for your Salesforce org:
 
 * Download the [SchemaSpy jar](http://schemaspy.sourceforge.net/)
 * Download and install [Graphviz](https://graphviz.gitlab.io/download/) that is used by SchemaSpy to create the automatically laid out diagrams; multiple platforms including Windows and Mac are supported but the Windows version is the easiest to install
-* Download the pre-built Force Metadata JDBC driver Jar or byild it (see previous section)
+* Download the pre-built Force Metadata JDBC driver Jar or build it (see previous section)
 * In the folder that contains the jars just enter this (replacing the arguments that start with "My" with your own values and entering it all on one line):
 ```
-java -cp schemaSpy_5.0.0.jar;force-metadata-jdbc-driver-2.3.jar net.sourceforge.schemaspy.Main -t force -u MyUserName -p MyPasswordAndSecurityToken -font Arial -fontsize 8 -hq -norows -o doc -db MyDbName -desc "Extracted from MyDbName"
+java -cp schemaSpy_5.0.0.jar;force-metadata-jdbc-driver-2.3.jar net.sourceforge.schemaspy.Main -t force -u MySalesforceUsername -p MySalesforcePasswordAndSecurityToken -font Arial -fontsize 8 -hq -norows -o doc -db MyOrgName -desc "Extracted from MyOrgName"
 ```
+The org that is connected to is defined by the `-u` Salesforce username argument (secured by the `-p` Salesforce password and security token). By default the connection is made to production/developer orgs as https://login.salesforce.com is used. See the `url` argument in the next section for how to connect to sandbox orgs using https://test.salesforce.com. The `-db` argument just passes the supplied name through to the output so pick a desxriptive name: it has no effect on which org is connected to.
+
 The SchemaSpy arguments are documented in the [SchemaSpy](http://schemaspy.sourceforge.net/) web site. The only change needed for Mac/Unix is the `-cp` argument separator changing from `;` to `:`.
 
 ### Force JDBC driver arguments
