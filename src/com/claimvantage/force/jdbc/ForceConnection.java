@@ -62,6 +62,10 @@ public class ForceConnection implements Connection {
     public ResultSet getPseudoColumns(String catalog, String schemaPattern, String tableNamePattern, String columnNamePattern) throws SQLException {
         return null;
     }
+    
+    // Added in Java 7
+    public void abort(Executor executor) throws SQLException {
+    }
 
     public void clearWarnings() throws SQLException {
     }
