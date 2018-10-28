@@ -6,6 +6,7 @@ import java.sql.CallableStatement;
 import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
+import java.sql.SQLFeatureNotSupportedException;
 import java.sql.NClob;
 import java.sql.PreparedStatement;
 import java.sql.SQLClientInfoException;
@@ -15,6 +16,7 @@ import java.sql.SQLXML;
 import java.sql.Savepoint;
 import java.sql.Statement;
 import java.sql.Struct;
+import java.util.concurrent.Executor;
 import java.util.Map;
 import java.util.Properties;
 
@@ -41,8 +43,12 @@ public class ForceConnection implements Connection {
     
     // Added in Java 7
     public int getNetworkTimeout() {
-        // Milliseconds
-        return 30 * 1000;
+        throw new SQLFeatureNotSupportedException();
+    }
+    
+    // Added in Java 7
+    public void setNetworkTimeout(Executor executor, int milliseconds) throws SQLException {
+        throw new SQLFeatureNotSupportedException();
     }
     
     //
