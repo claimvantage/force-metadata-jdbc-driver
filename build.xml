@@ -14,7 +14,9 @@
     </target>
 
     <target name="jar" depends="compile">
-        <jar destfile="force-metadata-jdbc-driver-2.2.jar">
+        
+        <!-- Source now supports Java 1.7 and 1.8 -->
+        <jar destfile="force-metadata-jdbc-driver-2.3.jar">
             
             <!-- Driver classes -->
             <fileset dir="bin"/>
