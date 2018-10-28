@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="project">
+
+    <target name="jar">
+        <jar destfile="force-metadata-jdbc-driver-2.2.jar">
+            
+            <!-- Driver classes -->
+            <fileset dir="bin"/>
+            
+            <!-- WSC and its generated classes -->
+            <zipfileset src="lib/wsc-20-partner-21-java-5.jar"/>
+            
+            <!-- This is for SchemaSpy -->
+            <fileset file="force.properties"/>
+        </jar>
+    </target>
+
+</project>
