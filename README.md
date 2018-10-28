@@ -10,7 +10,7 @@ An example diagram:
 
 ## Building
 
-Use Ant to generate the Jar file: the script merges all the classes into one Jar file. Or use your favourite Java IDE to accomplish the same thing.
+Use Ant to generate the Jar file: the script merges all the classes into one Jar file. Or use your favourite Java IDE to accomplish the same thing. The code will now compile using Java 1.8.
 
 ## Using
 
