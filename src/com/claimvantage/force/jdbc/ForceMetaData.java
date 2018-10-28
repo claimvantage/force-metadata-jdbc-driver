@@ -887,4 +887,9 @@ public class ForceMetaData implements DatabaseMetaData {
         
         return false;
     }
+    
+    // Added in Java 7
+    public ResultSet getPseudoColumns(String catalog, String schemaPattern, String tableNamePattern, String columnNamePattern) throws SQLException {
+        return null;
+    }
 }
