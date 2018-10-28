@@ -65,4 +65,8 @@ public class ForceMetaDataDriver implements Driver {
     public boolean jdbcCompliant() {
         return false;
     }
+	
+    public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+	throw new SQLFeatureNotSupportedException();
+    }
 }
