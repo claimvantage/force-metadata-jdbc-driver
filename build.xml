@@ -10,7 +10,7 @@
     <target name="compile">
         <delete dir="bin"/>
         <mkdir dir="bin"/>
-        <javac srcdir="src" destdir="bin" classpathref="classpath"/>
+        <javac srcdir="src" destdir="bin" classpathref="classpath" target="1.6"/>
     </target>
 
     <target name="jar" depends="compile">
