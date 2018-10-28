@@ -49,6 +49,15 @@ excludes | comma separated list of object names | "User" | custom or standard ob
 includes | comma separated list of object names | Empty | custom or standard object names that are an exact match are included (excludes takes priority over this) irrespective of the custom and standard flag settings\
 url | e.g. https://test.salesforce.com/services/Soap/u/18.0 | taken from the generated web service client jar | the URL (but note that the property name is in lower case) to use to get the Force.com metadata via the Partner web service API 
 
+### Proxy servers
+
+The following system properties (that can be set using e.g. Java executable -D arguments) are used if present to configure the corresponding values in the underlying WSC configuration:
+
+* http.auth.ntlm.domain
+* http.proxyHost and http.proxyPort (both must be set)
+* http.proxyUser
+* http.proxyPassword
+
 ## Original Documentation
 
 See:
