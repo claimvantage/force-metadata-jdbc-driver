@@ -12,16 +12,16 @@ An example diagram:
 
 The HTML pages include:
 * For each object:
-  * API Name
-  * Comments (multiple values squeezed in one column):
+  * Object API Name
+  * These multiple values in a Comments column:
     * Label and plural label
     * Record types
 * For each field:
-  *  API Name
+  * Field API Name
   * Type
   * Size
   * Parent and child object references
-  * Comments (multiple values squeezed in one column):
+  * These multiple values in a Comments column:
     * Label
     * Default
     * Formula
