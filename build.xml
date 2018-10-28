@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="project">
+<project name="project" default="jar">
+    
+    <target name="compile">
+        <delete dir="bin"/>
+        <javac srcdir="src" destdir="bin" classpath="lib"/>
+    </target>
 
     <target name="jar">
         <jar destfile="force-metadata-jdbc-driver-2.2.jar">
