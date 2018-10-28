@@ -23,15 +23,14 @@ Here is how to generate the SchemaSpy output for your Salesforcr org:
 ```
 java -cp schemaSpy_5.0.0.jar;force-metadata-jdbc-driver-2.0.jar net.sourceforge.schemaspy.Main -t force -u MyUserName -p MyPasswordAndSecurityToken -font Arial -fontsize 8 -hq -norows -o doc -db MyDbName -desc "Extracted from MyDbName"
 ```
-
 The arguments are documented in the SchemaSpy web site. The only change needed for Mac/Unix is the `-cp` argument separator changing from `;` to `:`.
 
-By default all custom objects are output. The set of objects that are output can be customized by adding a `-connprops` argument. Here is an example that outputs two standard objects in addition to all the custom objects:
+By default all custom objects are output. The set of objects that are output can be customized by adding a `-connprops` argument. (This awkward mechanism has to be used because SchemaSpy only passes this argument through to the JDBC driver.) Here is an example that outputs two standard objects in addition to all the custom objects:
 ```
--connprops excludes\=;includes\=Account,Contact
+... -connprops excludes\=;includes\=Account,Contact
 ```
 On Mac/Unix bash this would need to be:
 ```
--connprops excludes\\=\;includes\\=Account,Contact
+... -connprops excludes\\=\;includes\\=Account,Contact
 ```
 More details of how the -connprops can be used including how to change the URL to for example connect to a sandbox org are in the original usage page. (Note that the property to achieve this is url which is in lower case.)
