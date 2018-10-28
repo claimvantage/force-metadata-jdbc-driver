@@ -41,6 +41,12 @@ public class ForceConnection implements Connection {
         return new ForcePreparedStatement();
     }
     
+    
+    
+    //
+    // Not implemented below here
+    //
+    
     // Added in Java 7
     public int getNetworkTimeout() {
         throw new SQLFeatureNotSupportedException();
@@ -51,9 +57,10 @@ public class ForceConnection implements Connection {
         throw new SQLFeatureNotSupportedException();
     }
     
-    //
-    // Not implemented below here
-    //
+    // Added in Java 7
+    public ResultSet getPseudoColumns(String catalog, String schemaPattern, String tableNamePattern, String columnNamePattern) throws SQLException {
+        return null;
+    }
 
     public void clearWarnings() throws SQLException {
     }
