@@ -39,7 +39,7 @@ Name | Values | Default | Description
 ---- | ------ | --------| ----------- | 
 custom | true or false | "true" | consider custom objects
 standard | true or false | "false" | consider standard objects
-excludes | comma separated list of object names | "User" | custom or standard object names that are an exact match are excluded (takes priority over includes)
+excludes | comma separated list of object names | "User" | custom or standard object names that are an exact match are excluded (takes priority over includes); if you include "User" the diagram will look like a plate of spaghetti as every object is related to it
 includes | comma separated list of object names | Empty | custom or standard object names that are an exact match are included (excludes takes priority over this) irrespective of the custom and standard flag settings
 
 ## Original Documentation
