@@ -14,7 +14,9 @@ Use Ant to generate the Jar file: the script merges all the classes into one Jar
 
 ## Using
 
-Here is how to generate the SchemaSpy output for your Salesforcr org:
+### Running SchemaSpy and its arguments
+
+Here is how to generate the SchemaSpy output for your Salesforce org:
 
 * Download the [SchemaSpy jar](http://schemaspy.sourceforge.net/)
 * Download and install [Graphviz](http://www.graphviz.org/) that is used by SchemaSpy to create the automatically laid out diagrams; multiple platforms including Windows and Mac are supported
@@ -23,9 +25,13 @@ Here is how to generate the SchemaSpy output for your Salesforcr org:
 ```
 java -cp schemaSpy_5.0.0.jar;force-metadata-jdbc-driver-2.0.jar net.sourceforge.schemaspy.Main -t force -u MyUserName -p MyPasswordAndSecurityToken -font Arial -fontsize 8 -hq -norows -o doc -db MyDbName -desc "Extracted from MyDbName"
 ```
-The arguments are documented in the SchemaSpy web site. The only change needed for Mac/Unix is the `-cp` argument separator changing from `;` to `:`.
+The SchemaSpy arguments are documented in the [SchemaSpy](http://schemaspy.sourceforge.net/) web site. The only change needed for Mac/Unix is the `-cp` argument separator changing from `;` to `:`.
 
-By default all custom objects are output. The set of objects that are output can be customized by adding a `-connprops` argument. (This awkward mechanism has to be used because SchemaSpy only passes this argument through to the JDBC driver.) Here is an example that outputs two standard objects in addition to all the custom objects:
+### Force JDBC driver arguments
+
+Additional information is passed to the JDBC driver via a single SchemSpy `--connprops` argument. (This awkward mechanism has to be used because SchemaSpy only passes this argument through to the JDBC driver.)
+
+By default all custom objects are output. Here is an example that outputs two standard objects in addition to all the custom objects:
 ```
 ... -connprops excludes\=;includes\=Account,Contact
 ```
@@ -33,14 +39,15 @@ On Mac/Unix bash this would need to be:
 ```
 ... -connprops excludes\\=\;includes\\=Account,Contact
 ```
-Here is a more detailed explanation of how the `-connprops` work:
+The available `-connprops` arguments are:
 
 Name | Values | Default | Description
 ---- | ------ | --------| ----------- | 
 custom | true or false | "true" | consider custom objects
 standard | true or false | "false" | consider standard objects
 excludes | comma separated list of object names | "User" | custom or standard object names that are an exact match are excluded (takes priority over includes); if you include "User" the diagram will look like a plate of spaghetti as every object is related to it
-includes | comma separated list of object names | Empty | custom or standard object names that are an exact match are included (excludes takes priority over this) irrespective of the custom and standard flag settings
+includes | comma separated list of object names | Empty | custom or standard object names that are an exact match are included (excludes takes priority over this) irrespective of the custom and standard flag settings\
+url | e.g. https://test.salesforce.com/services/Soap/u/18.0 | taken from the generated web service client jar | the URL (but note that the property name is in lower case) to use to get the Force.com metadata via the Partner web service API 
 
 ## Original Documentation
 
