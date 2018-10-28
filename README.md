@@ -23,7 +23,7 @@ Here is how to generate the SchemaSpy output for your Salesforce org:
 * Build the Force Metadata JDBC driver jar (see previous section)
 * In the folder that contains the jars just enter this (replacing the arguments that start with "My" with your own values and entering it all on one line):
 ```
-java -cp schemaSpy_5.0.0.jar;force-metadata-jdbc-driver-2.0.jar net.sourceforge.schemaspy.Main -t force -u MyUserName -p MyPasswordAndSecurityToken -font Arial -fontsize 8 -hq -norows -o doc -db MyDbName -desc "Extracted from MyDbName"
+java -cp schemaSpy_5.0.0.jar;force-metadata-jdbc-driver-2.3.jar net.sourceforge.schemaspy.Main -t force -u MyUserName -p MyPasswordAndSecurityToken -font Arial -fontsize 8 -hq -norows -o doc -db MyDbName -desc "Extracted from MyDbName"
 ```
 The SchemaSpy arguments are documented in the [SchemaSpy](http://schemaspy.sourceforge.net/) web site. The only change needed for Mac/Unix is the `-cp` argument separator changing from `;` to `:`.
 
