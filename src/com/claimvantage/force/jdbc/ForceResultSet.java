@@ -151,6 +151,16 @@ public class ForceResultSet implements ResultSet {
     //
     // Not implemented below here
     //
+    
+    // Added in Java 7
+    public <T> T getObject(int columnIndex, Class<T> type) throws SQLException {
+        return null;
+    }
+    
+    // Added in Java 7
+    public <T> T getObject(String columnLabel, Class<T> type) throws SQLException {
+        return null;
+    }
 
     public boolean absolute(int row) throws SQLException {
         return false;
