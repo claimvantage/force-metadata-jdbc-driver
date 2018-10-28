@@ -3,6 +3,7 @@
     
     <target name="compile">
         <delete dir="bin"/>
+        <mkdir dir="bin"/>
         <javac srcdir="src" destdir="bin" classpath="lib"/>
     </target>
 
