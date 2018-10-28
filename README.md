@@ -10,6 +10,25 @@ An example diagram:
 
 ![Sample ERD](sample-erd.png)
 
+The HTML pages include:
+* For each object:
+** API Name
+** Comments (multiple values squeezed in one column):
+*** Label and plural label
+*** Record types
+* For each field:
+** API Name
+** Type
+** Size
+** Parent and child object references
+** Comments (multiple values squeezed in one column):
+*** Label
+*** Default
+*** Formula
+*** Picklist values
+*** Help
+*** Reference name
+
 ## Jar file
 
 A pre-built Jar is available in the [dist](dist) folder.
