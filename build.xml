@@ -6,7 +6,7 @@
         <javac srcdir="src" destdir="bin" classpath="lib"/>
     </target>
 
-    <target name="jar">
+    <target name="jar" depends="compile">
         <jar destfile="force-metadata-jdbc-driver-2.2.jar">
             
             <!-- Driver classes -->
