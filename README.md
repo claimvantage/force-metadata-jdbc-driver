@@ -12,9 +12,9 @@ An example diagram:
 
 The HTML pages include:
 * For each object:
-** API Name
-** Comments (multiple values squeezed in one column):
-*** Label and plural label
+  * API Name
+  * Comments (multiple values squeezed in one column):
+    * Label and plural label
 *** Record types
 * For each field:
 ** API Name
