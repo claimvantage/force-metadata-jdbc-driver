@@ -34,3 +34,11 @@ On Mac/Unix bash this would need to be:
 ... -connprops excludes\\=\;includes\\=Account,Contact
 ```
 More details of how the -connprops can be used including how to change the URL to for example connect to a sandbox org are in the original usage page. (Note that the property to achieve this is url which is in lower case.)
+
+## Original Documentation
+
+See:
+
+* [original usage page](https://code.google.com/archive/p/force-metadata-jdbc-driver/wikis/Useage.wiki)
+* [later usage page](https://code.google.com/archive/p/force-metadata-jdbc-driver/wikis/UsageForV2.wiki)
+* [issues](https://code.google.com/archive/p/force-metadata-jdbc-driver/issues)
