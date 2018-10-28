@@ -883,7 +883,8 @@ public class ForceMetaData implements DatabaseMetaData {
     }
     
     // Added in Java 7
-    public boolean generatedKeyAlwaysReturned()() {
+    public boolean generatedKeyAlwaysReturned() {
+        
         return false;
     }
 }
