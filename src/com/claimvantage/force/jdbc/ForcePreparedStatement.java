@@ -33,6 +33,12 @@ public class ForcePreparedStatement implements PreparedStatement {
     //
     // Not implemented below here
     //
+    
+    // Added in Java 7
+    public boolean isCloseOnCompletion() throws SQLException {
+        
+        return false;
+    }
 
     public void addBatch() throws SQLException {
     }
