@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="project" default="jar">
     
+     <path id="classpath">
+         <fileset dir="lib">
+             <include name="*.jar"/>
+         </fileset>
+    </path>
+    
     <target name="compile">
         <delete dir="bin"/>
         <mkdir dir="bin"/>
-        <javac srcdir="src" destdir="bin" classpath="lib/*.jar"/>
+        <javac srcdir="src" destdir="bin" classpathref="classpath"/>
     </target>
 
     <target name="jar" depends="compile">
