@@ -33,7 +33,14 @@ On Mac/Unix bash this would need to be:
 ```
 ... -connprops excludes\\=\;includes\\=Account,Contact
 ```
-More details of how the -connprops can be used including how to change the URL to for example connect to a sandbox org are in the original usage page. (Note that the property to achieve this is url which is in lower case.)
+To supplement SchemaSpy's `-i` option (which is an inclusion mask), the driver supports these optional properties:
+
+Name | Values | Default | Description
+---- | ------ | --------| ----------- | 
+custom | true or false | "true" | consider custom objects
+standard | true or false | "false" | consider standard objects
+excludes | comma separated list of object names | "User" | custom or standard object names that are an exact match are excluded (takes priority over includes)
+includes | comma separated list of object names | Empty | custom or standard object names that are an exact match are included (excludes takes priority over this) irrespective of the custom and standard flag settings
 
 ## Original Documentation
 
