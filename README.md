@@ -17,17 +17,17 @@ The HTML pages include:
     * Label and plural label
     * Record types
 * For each field:
-** API Name
-** Type
-** Size
-** Parent and child object references
-** Comments (multiple values squeezed in one column):
-*** Label
-*** Default
-*** Formula
-*** Picklist values
-*** Help
-*** Reference name
+  *  API Name
+  * Type
+  * Size
+  * Parent and child object references
+  * Comments (multiple values squeezed in one column):
+    * Label
+    * Default
+    * Formula
+    * Picklist values
+    * Help
+    * Reference name
 
 ## Jar file
 
