@@ -33,7 +33,7 @@ On Mac/Unix bash this would need to be:
 ```
 ... -connprops excludes\\=\;includes\\=Account,Contact
 ```
-To supplement SchemaSpy's `-i` option (which is an inclusion mask), the driver supports these optional properties:
+Here is a more detailed explanation of how the `-connprops` work:
 
 Name | Values | Default | Description
 ---- | ------ | --------| ----------- | 
