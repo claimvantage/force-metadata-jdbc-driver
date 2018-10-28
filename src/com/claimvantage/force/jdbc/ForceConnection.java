@@ -66,6 +66,15 @@ public class ForceConnection implements Connection {
     // Added in Java 7
     public void abort(Executor executor) throws SQLException {
     }
+    
+    // Added in Java 7
+    public String getSchema() throws SQLException {
+        return null;
+    }
+    
+    // Added in Java 7
+    public void setSchema(String name) throws SQLException {
+    }
 
     public void clearWarnings() throws SQLException {
     }
