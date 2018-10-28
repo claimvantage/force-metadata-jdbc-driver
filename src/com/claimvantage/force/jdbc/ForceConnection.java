@@ -49,12 +49,12 @@ public class ForceConnection implements Connection {
     //
     
     // Added in Java 7
-    public int getNetworkTimeout() {
+    public int getNetworkTimeout() throws SQLFeatureNotSupportedException {
         throw new SQLFeatureNotSupportedException();
     }
     
     // Added in Java 7
-    public void setNetworkTimeout(Executor executor, int milliseconds) throws SQLException {
+    public void setNetworkTimeout(Executor executor, int milliseconds) throws SQLException, SQLFeatureNotSupportedException {
         throw new SQLFeatureNotSupportedException();
     }
     
