@@ -4,7 +4,7 @@
     <target name="compile">
         <delete dir="bin"/>
         <mkdir dir="bin"/>
-        <javac srcdir="src" destdir="bin" classpath="lib"/>
+        <javac srcdir="src" destdir="bin" classpath="lib/*.jar"/>
     </target>
 
     <target name="jar" depends="compile">
