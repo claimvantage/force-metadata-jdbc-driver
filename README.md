@@ -24,7 +24,7 @@ Here is how to generate the SchemaSpy output for your Salesforce org:
 
 * Download the [SchemaSpy jar](http://schemaspy.sourceforge.net/)
 * Download and install [Graphviz](https://graphviz.gitlab.io/download/) that is used by SchemaSpy to create the automatically laid out diagrams; multiple platforms including Windows and Mac are supported but the Windows version is the easiest to install
-* Build or download the pre-built Force Metadata JDBC driver Jar (see previous section)
+* Download the pre-built Force Metadata JDBC driver Jar or byild it (see previous section)
 * In the folder that contains the jars just enter this (replacing the arguments that start with "My" with your own values and entering it all on one line):
 ```
 java -cp schemaSpy_5.0.0.jar;force-metadata-jdbc-driver-2.3.jar net.sourceforge.schemaspy.Main -t force -u MyUserName -p MyPasswordAndSecurityToken -font Arial -fontsize 8 -hq -norows -o doc -db MyDbName -desc "Extracted from MyDbName"
