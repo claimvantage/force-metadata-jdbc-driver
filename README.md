@@ -1,6 +1,4 @@
-# force-metadata-jdbc-driver
-
-[![Build Status](https://travis-ci.com/ClaimVantage/force-metadata-jdbc-driver.svg?branch=master)](https://travis-ci.com/ClaimVantage/force-metadata-jdbc-driver)
+# force-metadata-jdbc-driver [![Build Status](https://travis-ci.com/claimvantage/force-metadata-jdbc-driver.svg?branch=master)](https://travis-ci.com/claimvantage/force-metadata-jdbc-driver)
 
 ## Introduction
 
