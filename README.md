@@ -62,7 +62,7 @@ On Mac/Unix bash this would need to be:
 ```
 ... -connprops excludes\\=\;includes\\=Account,Contact
 ```
-Working with scratch orgs, you will need to supply hte URL too:
+When working with scratch orgs, you will need to supply the URL too:
 ```
 ... -connprops includes\=Contact,Account;url\=https://app-ruby-6019-dev-ed.cs9.my.salesforce.com/services/Soap/u/23.0
 ```
