@@ -305,7 +305,7 @@ public class ForceMetaData implements DatabaseMetaData {
 
     public String getNumericFunctions() throws SQLException {
 
-        return null;
+        return "";
     }
 
     public ResultSet getProcedureColumns(String catalog, String schemaPattern,
@@ -338,7 +338,7 @@ public class ForceMetaData implements DatabaseMetaData {
 
     public String getStringFunctions() throws SQLException {
 
-        return null;
+        return "";
     }
 
     public ResultSet getSuperTables(String catalog, String schemaPattern,
@@ -355,7 +355,7 @@ public class ForceMetaData implements DatabaseMetaData {
 
     public String getSystemFunctions() throws SQLException {
 
-        return null;
+        return "";
     }
 
     public ResultSet getTablePrivileges(String catalog, String schemaPattern,
@@ -366,7 +366,7 @@ public class ForceMetaData implements DatabaseMetaData {
 
     public String getTimeDateFunctions() throws SQLException {
 
-        return null;
+        return "";
     }
 
     public ResultSet getTypeInfo() throws SQLException {
