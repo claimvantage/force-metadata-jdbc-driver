@@ -39,13 +39,18 @@ If you want to build the Jar, use Ant. The build.xml merges all the classes into
 
 Here is how to generate the SchemaSpy output for your Salesforce org:
 
-* Download the [SchemaSpy jar](http://schemaspy.sourceforge.net/)
+* Download the SchemaSpy jar from [Sourceforge for v5](http://schemaspy.sourceforge.net/) or [Github for v6](https://github.com/schemaspy/schemaspy/releases)
 * Download and install [Graphviz](https://graphviz.gitlab.io/download/) that is used by SchemaSpy to create the automatically laid out diagrams; multiple platforms including Windows and Mac are supported but the Windows version is the easiest to install
 * Download the pre-built Force Metadata JDBC driver Jar or build it (see previous section)
 * In the folder that contains the jars just enter this (replacing the arguments that start with "My" with your own values and entering it all on one line):
 ```
 java -cp schemaSpy_5.0.0.jar;force-metadata-jdbc-driver-2.3.jar net.sourceforge.schemaspy.Main -t force -u MySalesforceUsername -p MySalesforcePasswordAndSecurityToken -font Arial -fontsize 8 -hq -norows -o doc -db MyOrgName -desc "Extracted from MyOrgName"
 ```
+* SchemaSpy v6 requires the addition of the `-cat %` and `-s force` arguments as well
+```
+java -jar schemaspy-6.0.0.jar -dp force-metadata-jdbc-driver-2.3.jar -t force -u MySalesforceUsername -p MySalesforcePasswordAndSecurityToken -o doc -db MyOrgName -cat % -s force
+```
+
 The org that is connected to is defined by the `-u` Salesforce username argument (secured by the `-p` Salesforce password and security token). By default the connection is made to production/developer orgs as https://login.salesforce.com is used. See the `url` argument in the next section for how to connect to sandbox orgs using https://test.salesforce.com. The `-db` argument just passes the supplied name through to the output so pick a descriptive name: it has no effect on the org that is connected to.
 
 The SchemaSpy arguments are documented in the [SchemaSpy](http://schemaspy.sourceforge.net/) web site. The only change needed for Mac/Unix is the `-cp` argument separator changing from `;` to `:`.
@@ -69,12 +74,12 @@ When working with scratch orgs, you will need to supply the URL too e.g.:
 The available `-connprops` arguments are:
 
 | Name | Values | Default | Description
-|:---- |:------ |:--------|:----------- | 
+|:---- |:------ |:--------|:----------- |
 | custom | true or false | "true" | consider custom objects
 | standard | true or false | "false" | consider standard objects
 | excludes | comma separated list of object names | "User" | custom or standard object names that are an exact match are excluded (takes priority over includes); if you include "User" the diagram will look like a plate of spaghetti as every object is related to it
 | includes | comma separated list of object names | Empty | custom or standard object names that are an exact match are included (excludes takes priority over this) irrespective of the custom and standard flag settings\
-| url | https://test.salesforce.com/services/Soap/u/18.0 (for a sandbox) | taken from the generated web service client jar | the URL (but note that the property name is in lower case) to use to get the metadata via the Partner Web Service API 
+| url | https://test.salesforce.com/services/Soap/u/18.0 (for a sandbox) | taken from the generated web service client jar | the URL (but note that the property name is in lower case) to use to get the metadata via the Partner Web Service API
 
 ### Java properties for proxy servers
 
