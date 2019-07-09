@@ -29,7 +29,7 @@ The HTML pages include:
 
 ## Jar file
 
-The latest pre-built Jar is available [here](https://github.com/claimvantage/force-metadata-jdbc-driver/releases/download/latest/force-metadata-jdbc-driver-2.3.jar), or you can find it on Releases tab of the [project](https://github.com/claimvantage/force-metadata-jdbc-driver/).
+The latest pre-built Jar is available [here](https://github.com/claimvantage/force-metadata-jdbc-driver/releases/latest/download/force-metadata-jdbc-driver-2.3.jar), or you can find it on Releases tab of the [project](https://github.com/claimvantage/force-metadata-jdbc-driver/).
 
 If you want to build the Jar, use Ant. The build.xml merges all the classes into one Jar file. Or use your favourite Java IDE to accomplish the same thing. The code will now compile using Java 1.8.
 
