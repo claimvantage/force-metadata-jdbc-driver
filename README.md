@@ -29,7 +29,7 @@ The HTML pages include:
 
 ## Jar file
 
-A pre-built Jar is available in the [dist](dist) folder.
+A pre-built Jar is available in the Releases tab.
 
 If you want to build the Jar, use Ant. The build.xml merges all the classes into one Jar file. Or use your favourite Java IDE to accomplish the same thing. The code will now compile using Java 1.8.
 
